@@ -1,22 +1,40 @@
-<h2>Assistente IA para Correção de Exercícios de Programação</h2>
+# Assistente IA para Correção de Exercícios de Programação
 
-<p>Prepare-se para uma revolução na correção de exercícios de programação! Nosso assistente IA oferece uma forma totalmente automatizada de avaliar respostas de estudantes, adequada para qualquer professor que trabalhe em um Ambiente Virtual de Aprendizagem (AVA). Tudo o que você precisa é de um arquivo compactado contendo as respostas dos alunos!</p>
+O assistente IA proporciona uma forma automática de corrigir exercícios de programação, pode ser usada por qualquer professor que trabalhe em um Ambiente Virtual de Aprendizagem (AVA) capaz de baixar as respostas dos estudantes em um arquivo único compactado.
 
-<h3>Entrada</h3>
+# Entrada
+O assistente é capaz de ler um arquivo PDF contendo o enunciado dos exercícios de programação e corrigir as respostas dos estudantes, que vem compactadas em um arquivo ZIP.
 
-<p>Imagine só: nosso modelo pode analisar um arquivo PDF repleto de desafios de programação e, em seguida, corrigir as respostas dos estudantes, todas compactadas em um arquivo ZIP. Simplifique sua vida e economize tempo com essa solução inovadora!</p>
+# Saída
+O modelo gera um feedback personalizado para cada exercício feito pelo aluno, atribuindo uma nota de 0 a 10 e calculando a média final obtida.
 
-<h3>Saída</h3>
+# Dados de teste
+Foram empregados dados reais (descaracterizados) para testar o modelo, você pode baixar os arquivos utilizados no teste:
 
-<p>Não é incrível? Nosso assistente gera feedbacks personalizados para cada exercício realizado pelos alunos. E tem mais: ele atribui uma nota de 0 a 10 para cada resposta e até calcula a média final. Prepare-se para se surpreender com a precisão e eficiência desse sistema!</p>
+*   Arquivo PDF contendo o enunciado dos exercícios. [Clique aqui para baixar o arquivo PDF de teste](https://raw.githubusercontent.com/jcnborges/AutomaticHWCorrector/main/teste/Lista%201%20-%20Revis%C3%A3o%20da%20linguagem%20Java.pdf)
 
-<h3>Dados de teste</h3>
+*   Arquivo ZIP contendo a resposta de cada estudante. [Clique aqui para baixar o arquivo ZIP de teste](https://raw.githubusercontent.com/jcnborges/AutomaticHWCorrector/main/teste/respostas.zip)
 
-<p>Não se preocupe, testamos nosso modelo com dados reais para garantir sua eficácia. E o melhor de tudo: você pode conferir os arquivos utilizados nos testes e ver o assistente IA em ação!</p>
+# AI Gemini Systems Instructions
 
-<ul>
-  <li><strong>URL do arquivo PDF contendo o enunciado dos exercícios:</strong> <a href="#">Clique aqui para baixar o arquivo PDF de teste</a></li>
-  <li><strong>URL do arquivo .zip contendo a resposta de cada estudante:</strong> <a href="#">Clique aqui para baixar o arquivo .zip de teste</a></li>
-</ul>
+As seguintes instruções foram configuradas para serem aplicadas em todas as avaliações dos alunos:
 
-<p>Prepare-se para uma nova era na correção de exercícios de programação! Experimente agora mesmo o nosso assistente IA e descubra como ele pode transformar sua rotina de correção!</p>
+
+
+```
+Faça a avaliação como se fosse um professor de engenharia de software.
+Use os enunciados do PDF para avaliar o exercício do aluno.
+Informe se o exercício do aluno diverge do enunciado do PDF.
+Atribua uma nota de 0 a 10 a cada exercício e calcule a média final.
+Caso o exercício não tenha sido entregue, atribua a nota zero.
+Use o nome do arquivo para inferir qual é o exercício.
+Forneça um relatório padronizado:
+    ## Nome do aluno: <nome> ##
+    ## Exercício: <numero> ##
+        * Enunciado PDF:        
+        * Avaliação do código:
+        * Sugestão de melhoria:
+        * Nota:
+    ## Média final: ##
+    ## Dificuldade do aluno:   
+```
