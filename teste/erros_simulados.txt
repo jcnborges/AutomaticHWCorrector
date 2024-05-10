@@ -1,0 +1,44 @@
+O aluno11 foi gerado a partir do aluno10 e alguns erros de códigos foram introduzidos afim de verificar a capacidade de o assistente identificar esses erros
+
+ex1:
+	linha 23
+		correto:
+			int decimetros = numero*10; int centimetros = numero*100; int milimetros = numero*1000;
+		erro simulado:
+      int decimetros = numero*0.1; int centimetros = numero*0.01; int milimetros = numero*0.001;
+	
+ex2:
+	linha 26
+		correto:
+			int resultado = numero * multiplicador;
+		erro simulado:
+			int resultado = numero;
+
+ex4:
+	linhas 29-37
+		correto:
+        if (ladoa != ladob && ladob != ladoc && ladoc != ladoa) {
+            System.out.println("O triangulo que voce criou e um escaleno");
+        }
+        else if (ladoa == ladob && ladob == ladoc && ladoc == ladoa) {
+            System.out.println("O triangulo que voce criou e um equilatero");
+        }
+        else {
+            System.out.println("O triangulo que voce criou e um isosceles");
+        }
+    erro simulado:
+        if (ladoa != ladob && ladob != ladoc && ladoc != ladoa) {
+            System.out.println("O triangulo que voce criou e um isosceles");
+        }
+        else if (ladoa == ladob && ladob == ladoc && ladoc == ladoa) {
+            System.out.println("O triangulo que voce criou e um escaleno");
+        }
+        else {
+            System.out.println("O triangulo que voce criou e um equilatero");
+        }         		
+			
+ex5: arquivo excluído
+ex6: arquivo excluído
+
+ex7 e ex8:
+	o código do ex7 foi trocado pelo codigo do ex8 e vice-versa
