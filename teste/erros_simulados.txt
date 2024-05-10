@@ -5,7 +5,7 @@ ex1:
 		correto:
 			int decimetros = numero*10; int centimetros = numero*100; int milimetros = numero*1000;
 		erro simulado:
-      int decimetros = numero*0.1; int centimetros = numero*0.01; int milimetros = numero*0.001;
+       int decimetros = numero; int centimetros = numero; int milimetros = numero;
 	
 ex2:
 	linha 26
